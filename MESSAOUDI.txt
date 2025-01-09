@@ -63,17 +63,6 @@ git commit -m "suppression du fichier test"
 git push origin front
 
 
-## suppression des fichiers inutiles de chaque branche
-## FRONT
-git rm style.css
-git commit -m "suppression de style.css"
-git push origin front
-## BACK
-git rm index.html
-git commit -m "suppression de index.html"
-git push origin back
-
-
 ## mise à jour du repository
 git fetch
 
