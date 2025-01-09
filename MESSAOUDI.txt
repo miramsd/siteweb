@@ -1,0 +1,94 @@
+## création du repository
+mkdir siteweb
+cd siteweb
+git init
+ls -a
+
+## création des deux fichiers principaux
+nano index.hmtl
+nano style.css
+
+## ajout de l'URL, du nom et du mail
+git remote add origin https://github.com/miramsd/siteweb
+git status
+git config user.name "miramsd"
+git config user.email "messaoudi.mira88@gmail.com"
+
+## ajout, commit et push des fichiers principaux
+git add index.html
+git add style.css
+git status
+git commit -m "premier commit"
+git push -u origin master 
+ miramsd
+ token1
+
+## création de mes deux branches annexes
+## ajout, modification, commit et push des nouvelles versions de mes fichiers
+git branch front
+git checkout front
+git add index.html
+nano index.html 
+git commit -m "nouvelle version de l'index"
+git push origin front
+
+## changement de branche
+git checkout back
+git add style.css
+nano style.css 
+git commit -m "nouvelle version de la feuille de style"
+git push origin back
+
+
+## ajout de code dans les fichiers style.css et index.html
+nano style.css
+git commit -m "modification de la feuille de style"
+git push origin back
+git checkout front
+nano index.html
+git commit -m "ajout d'un tableau à l'index"
+git push front
+
+## REPETITION DE CES COMMANDES A CHAQUE MODIFICATION
+
+## création d'un fichier test
+nano test.txt
+git commit -m "fichier de test"
+git push origin front
+
+
+## suppression du fichier test
+git rm test.txt
+git commit -m "suppression du fichier test"
+git push origin front
+
+
+## suppression des fichiers inutiles de chaque branche
+## FRONT
+git rm style.css
+git commit -m "suppression de style.css"
+git push origin front
+## BACK
+git rm index.html
+git commit -m "suppression de index.html"
+git push origin back
+
+
+## mise à jour du repository
+git fetch
+
+
+## merge des versions de chacun dans le master
+git merge indexB
+git merge styletest1.css
+git commit -m "merge des versions"
+git push origin master
+
+
+## merge de la version finale
+git merge front
+git merge back
+git commit -m "merge final"
+git push origin master
+
+_________________________________________________________
