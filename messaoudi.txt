@@ -1,0 +1,26 @@
+mkdir siteweb
+cd siteweb
+git init
+ls -a
+
+nano index.hmtl
+nano style.css
+
+git remote add origin https://github.com/miramsd/siteweb
+git status
+git add index.html
+git add style.css
+git status
+
+git config user.name "miramsd"
+git config user.email "messaoudi.mira88@gmail.com"
+git commit -m "premier commit"
+
+git push -u origin master 
+ miramsd
+ token1
+
+git branch front
+git checkout front
+git add index.html
+git commit -m "nouvelle version de l'index"
