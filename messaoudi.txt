@@ -1,26 +1,40 @@
+## création du repository
 mkdir siteweb
 cd siteweb
 git init
 ls -a
 
+## création des deux fichiers principaux
 nano index.hmtl
 nano style.css
 
+## ajout de l'URL, du nom et du mail
 git remote add origin https://github.com/miramsd/siteweb
 git status
+git config user.name "miramsd"
+git config user.email "messaoudi.mira88@gmail.com"
+
+## ajout, commit et push des fichiers principaux
 git add index.html
 git add style.css
 git status
-
-git config user.name "miramsd"
-git config user.email "messaoudi.mira88@gmail.com"
 git commit -m "premier commit"
-
 git push -u origin master 
  miramsd
  token1
 
+## création de mes deux branches annexes
+## ajout, modification, commit et push des nouvelles versions de mes fichiers
 git branch front
 git checkout front
 git add index.html
+nano index.html 
 git commit -m "nouvelle version de l'index"
+git push origin front
+
+## changement de branche
+git checkout back
+git add style.css
+nano style.css 
+git commit -m "nouvelle version de la feuille de style"
+git push origin back
