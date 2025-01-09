@@ -1,0 +1,8 @@
+git init
+git status
+git commit -m
+git config user.name
+git config user.email
+git add 
+git push origin
+
